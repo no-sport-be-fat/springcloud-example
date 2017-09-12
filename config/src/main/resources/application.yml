@@ -1,0 +1,16 @@
+server:
+  port: 8088
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/forezp/SpringcloudConfig/
+          search-paths: respo
