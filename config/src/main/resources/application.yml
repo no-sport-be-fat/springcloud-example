@@ -3,7 +3,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8080/eureka/
+      defaultZone: http://liuxl1:8180/eureka/,http://liuxl:8080/eureka/,http://liuxl2:8280/eureka/
 spring:
   application:
     name: config-server

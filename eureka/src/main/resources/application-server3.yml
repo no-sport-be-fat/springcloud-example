@@ -1,0 +1,14 @@
+server:
+  port: 8280
+eureka:
+#  server:
+#      enable-self-preservation: false
+#      eviction-interval-timer-in-ms: 4000
+  instance:
+    hostname: liuxl2
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+#    registerWithEureka: false
+#    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://liuxl1:8180/eureka/,http://liuxl:8080/eureka/
