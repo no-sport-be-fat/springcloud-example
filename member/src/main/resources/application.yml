@@ -7,6 +7,14 @@ server:
 spring:
   application:
     name: member
+#datasource config
+jdbc:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/springCould?useUnicode=true&characterEncoding=utf8
+  username: root
+  password: ypm2al
 
-
-
+#mybatis config
+mybatis:
+  typeAliasesPackage: com.bs.entity
+  mapperLocations: classpath:mapper/*.xml
