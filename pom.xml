@@ -12,5 +12,6 @@
         <module>config</module>
         <module>eureka</module>
         <module>member</module>
+        <module>memberWeb</module>
     </modules>
 </project>

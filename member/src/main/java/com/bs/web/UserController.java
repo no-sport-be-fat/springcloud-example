@@ -26,20 +26,17 @@ public class UserController {
     @Resource
     private DiscoveryClient client;
 
-    @RequestMapping(value="/addUser",method= RequestMethod.POST)
-    @ResponseBody
+    @RequestMapping(value="/addUser")
     public int addUser(@RequestBody User user){
         return userService.addUser(user);
     }
 
-    @RequestMapping(value="/getUserById",method=RequestMethod.GET)
-    @ResponseBody
+    @RequestMapping(value="/getUserById")
     public User getUserById(){
         return userService.getUserById(1);
     }
 
-    @RequestMapping(value="/getAllUsers",method=RequestMethod.GET)
-    @ResponseBody
+    @RequestMapping(value="/getAllUsers")
     public List<User> getAllUsers(){
         List<User> listUser = userService.getAllUsers();
         //获取服务信息
