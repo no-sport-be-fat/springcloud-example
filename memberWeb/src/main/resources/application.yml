@@ -11,3 +11,11 @@ spring:
 feign:
   hystrix:
     enabled: true
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: member
+#    api-b:
+#      path: /api-b/**
+#      serviceId: service-feign

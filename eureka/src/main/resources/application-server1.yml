@@ -11,4 +11,4 @@ eureka:
 #    registerWithEureka: false
 #    fetchRegistry: false
     serviceUrl:
-      defaultZone: http://liuxl2:8380/eureka/,http://liuxl1:8180/eureka/
+      defaultZone: http://liuxl2:8280/eureka/,http://liuxl1:8180/eureka/
