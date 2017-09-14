@@ -16,6 +16,8 @@ zuul:
     api-a:
       path: /api-a/**
       serviceId: member
+logging:
+  config: classpath:log4j2.xml
 #    api-b:
 #      path: /api-b/**
 #      serviceId: service-feign

@@ -26,7 +26,7 @@ public class UserController {
     @Resource
     private DiscoveryClient client;
 
-    @RequestMapping(value="/addUser")
+    @RequestMapping(value="/addUser",method= RequestMethod.POST)
     public int addUser(@RequestBody User user){
         return userService.addUser(user);
     }

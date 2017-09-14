@@ -18,3 +18,5 @@ jdbc:
 mybatis:
   typeAliasesPackage: com.bs.entity
   mapperLocations: classpath:mapper/*.xml
+logging:
+  config: classpath:log4j2.xml

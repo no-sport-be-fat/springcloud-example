@@ -84,6 +84,25 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>1.3.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <!-- spring boot 1.3.5.RELEASE使用log4j,
+            在spring boot 1.4的版本中，就需要使用log4j2,否则会出现如下错误：
+            Project build error: 'dependencies.dependency.version' for org.springframework.boot:spring-boot-starter-log4j:jar is missing.
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+            -->
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
 
     </dependencies>
     <dependencyManagement>
