@@ -15,4 +15,10 @@ spring:
   application:
     name: eureka-server-cluster
   profiles:
-    active: liuxl
+    active: server
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin #用户名
+    password: admin #密码

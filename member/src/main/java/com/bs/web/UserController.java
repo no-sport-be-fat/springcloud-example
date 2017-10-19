@@ -5,6 +5,7 @@ import com.bs.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +27,9 @@ public class UserController {
     @Resource
     private DiscoveryClient client;
 
+    @Value("${foo}")
+    String foo;
+
     @RequestMapping(value="/addUser",method= RequestMethod.POST)
     public int addUser(@RequestBody User user){
         return userService.addUser(user);
@@ -41,6 +45,7 @@ public class UserController {
         List<User> listUser = userService.getAllUsers();
         //获取服务信息
         ServiceInstance instance = client.getLocalServiceInstance();
+        System.out.println(foo);
         //输出服务信息
         logger.info("uri={}，serviceId={}，result={}", instance.getUri(), instance.getServiceId(),listUser);
         return listUser;

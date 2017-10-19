@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://liuxl1:8180/eureka/,http://liuxl:8080/eureka/,http://liuxl2:8280/eureka/
+      defaultZone: http://admin:admin@server1:8180/eureka/,http://admin:admin@server:8080/eureka/,http://admin:admin@server2:8280/eureka/
 server:
   port: 8083
 spring:
@@ -21,3 +21,9 @@ logging:
 #    api-b:
 #      path: /api-b/**
 #      serviceId: service-feign
+
+#spring.beetl.root = classpath:/templates/
+#spring.beetl.prefix =
+#spring.beetl.suffix = .html
+#spring.beetl.order = 0
+#spring.beetl.cofig = classpath:beetl.properties

@@ -1,14 +1,14 @@
 server:
-  port: 8080
+  port: 8180
 eureka:
 #  server:
 #      enable-self-preservation: false
 #      eviction-interval-timer-in-ms: 4000
   instance:
-    hostname: liuxl
+    hostname: server1
     instance-id: ${spring.application.name}:${server.port}
   client:
 #    registerWithEureka: false
 #    fetchRegistry: false
     serviceUrl:
-      defaultZone: http://liuxl2:8280/eureka/,http://liuxl1:8180/eureka/
+      defaultZone: http://admin:admin@server:8080/eureka/,http://admin:admin@server2:8280/eureka/
